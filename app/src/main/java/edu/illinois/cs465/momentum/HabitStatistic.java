@@ -31,11 +31,12 @@ public class HabitStatistic extends AppCompatActivity implements View.OnClickLis
     Calendar d1 = Calendar.getInstance();
     TextView thedate;
     List<Calendar> disable = new ArrayList<>();
-
+    String note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+
 
         d1.set(Calendar.YEAR, 2019);
         d1.set(Calendar.MONTH, 11);
@@ -49,6 +50,8 @@ public class HabitStatistic extends AppCompatActivity implements View.OnClickLis
         final CalendarDay days4 = CalendarDay.from( 2019 , 11 , 3 );
         final CalendarDay days5 = CalendarDay.from( 2019 , 11 , 5 );
         final CalendarDay days6 = CalendarDay.from( 2019 , 11 , 6 );
+        //date for today
+        final CalendarDay today = CalendarDay.from( 2019 , 11 , 21 );
 
 
         setContentView(R.layout.activity_habit_statistic);
@@ -62,8 +65,15 @@ public class HabitStatistic extends AppCompatActivity implements View.OnClickLis
         materialCalendarView.setDateSelected(days6,true);
 
 
+
         Button btn=(Button)findViewById(R.id.viewpicid);
         btn.setOnClickListener(this);
+
+        Intent intent = getIntent();
+        note = intent.getStringExtra(LogHabitActivity.EXTRA_MESSAGE);
+        if (note != null) {
+            materialCalendarView.setDateSelected(today,true);
+        }
 
         materialCalendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
@@ -95,6 +105,13 @@ public class HabitStatistic extends AppCompatActivity implements View.OnClickLis
                     thedate.setText(" 3 more chapters left");
                     widget.setDateSelected(days6,true);
                 }
+
+                //get note from intent and set today
+                if (time.equals("CalendarDay{2019-11-21}")){
+                    thedate.setText(note);
+                    widget.setDateSelected(today,true);
+                }
+
             }
         });
 

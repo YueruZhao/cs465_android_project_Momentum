@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewPicture"></activity>
+        <activity android:name=".NewCompetition"></activity>
+        <activity android:name=".CompetitionDetail" />
+        <activity android:name=".SearchCompetition" />
+        <activity android:name=".ViewPicture" />
         <activity android:name=".HabitStatistic" />
         <activity android:name=".LogHabitActivity">
             <meta-data

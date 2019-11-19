@@ -2,15 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_recents"
-        android:enabled="true"
-        android:title="Habit"
+    android:id="@+id/competition"
+    android:enabled="true"
+    android:title="My Competitions"
     />
 
     <item
-    android:id="@+id/action_nearby"
-    android:enabled="true"
-    android:title="Competition"
-    />
+        android:id="@+id/habit"
+        android:enabled="true"
+        android:title="My Habits"
+        />
+
+    <item
+        android:id="@+id/browse"
+        android:enabled="true"
+        android:title="Browse"
+        />
 
 </menu>
