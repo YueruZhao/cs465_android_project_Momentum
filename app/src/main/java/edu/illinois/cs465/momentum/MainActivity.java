@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -36,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.habit:
+
                     return true;
                 case R.id.competition:
-
+                    Intent competitionIntent = new Intent(MainActivity.this, CompetitionMain.class);
+                    MainActivity.this.startActivity(competitionIntent);
                     return true;
                 case R.id.browse:
                     Intent searchIntent = new Intent(MainActivity.this, SearchCompetition.class);
@@ -81,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
     public void LogHabit(View view) {
         Intent intent = new Intent(this, LogHabitActivity.class);
         TextView habit;
-        if ( view.getId() == R.id.loghabit1){
-            habit = findViewById(R.id.habit1);
+        if ( view.getId() == R.id.logcomp1){
+            habit = findViewById(R.id.comp1);
         } else{
-            habit = findViewById(R.id.habit2);
+            habit = findViewById(R.id.comp2);
         }
         String habitName = habit.getText().toString();
         intent.putExtra(CURRENT_HABIT, habitName);

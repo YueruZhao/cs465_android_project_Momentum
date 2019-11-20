@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewCompetition"></activity>
+        <activity android:name=".ExistingCompetition"></activity>
+        <activity android:name=".CompetitionMain" />
+        <activity android:name=".NewCompetition" />
         <activity android:name=".CompetitionDetail" />
         <activity android:name=".SearchCompetition" />
         <activity android:name=".ViewPicture" />
@@ -24,10 +26,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity
-            android:name=".CompetitionActivity"
-            android:label="@string/title_activity_competition"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
