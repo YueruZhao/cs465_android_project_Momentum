@@ -70,8 +70,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="40dp"
+        android:alpha="0.5"
+        android:background="#0000FF"
         android:gravity="center_vertical"
         android:text="I DID IT TODAY"
+        android:textColor="@android:color/white"
         android:textColorHighlight="#2041F8"
         android:textSize="30sp">
 

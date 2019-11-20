@@ -71,6 +71,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="right"
+        android:background="#00000000"
         android:onClick="createHabit"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_add_circle_outline_24px" />
