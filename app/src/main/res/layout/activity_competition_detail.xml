@@ -71,6 +71,7 @@
             />
         <Button
             android:layout_width="120dp"
+            android:id="@+id/joinbtn"
             android:layout_height="wrap_content"
             android:text="Join this!"
             android:textColor="#FFFFFF"

@@ -16,23 +16,15 @@ import android.widget.Toast;
 public class SearchCompetition extends AppCompatActivity {
     SearchView mySearchView;
     ListView myList;
-
-//        Competiton competiton1;
-//        Competiton competiton2;
-//        Competiton competiton3;
-//        Competiton competiton4;
-
     ArrayList<String> list;
-
     String[] items;
-
     ArrayAdapter<String> adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search_competition);
 
 
 
@@ -63,22 +55,42 @@ public class SearchCompetition extends AppCompatActivity {
         myList.setClickable(true);
         items = list.toArray(new String[list.size()]);
 
+
+
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                if (position==0){
+                    Intent showdetailIntent3 = new Intent(SearchCompetition.this, CompetitionDetail.class);
+                    SearchCompetition.this.startActivity(showdetailIntent3);
+                }
+//                Toast toast = Toast.makeText(SearchCompetition.this, ""+items[position], Toast.LENGTH_SHORT);
+//                toast.show();
                 if (items[position].equals("Drink 8 Glasses of Water everyday")){
+//                    Toast toast1 = Toast.makeText(SearchCompetition.this, "water", Toast.LENGTH_SHORT);
+//                    toast1.show();
                     Intent showdetailIntent = new Intent(SearchCompetition.this, CompetitionDetail.class);
                     SearchCompetition.this.startActivity(showdetailIntent);
                 }
 
             }
         });
+        mySearchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast toast = Toast.makeText(SearchCompetition.this, "here", Toast.LENGTH_SHORT);
+//                toast.show();
+                mySearchView.setIconified(false);
+                mySearchView.onActionViewExpanded();
+                Intent showdetailIntent2 = new Intent(SearchCompetition.this, CompetitionDetail.class);
+                SearchCompetition.this.startActivity(showdetailIntent2);
+            }
+        });
 
         mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                return false;
+                return true;
             }
 
             @Override

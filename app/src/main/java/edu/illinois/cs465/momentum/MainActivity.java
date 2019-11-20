@@ -38,8 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.habit:
                     return true;
                 case R.id.competition:
+
                     return true;
                 case R.id.browse:
+                    Intent searchIntent = new Intent(MainActivity.this, SearchCompetition.class);
+                    MainActivity.this.startActivity(searchIntent);
                     return true;
             }
             return false;
