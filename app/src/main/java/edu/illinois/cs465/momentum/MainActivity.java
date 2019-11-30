@@ -34,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
             switch (item.getItemId()) {
-                case R.id.habit:
-
-                    return true;
                 case R.id.competition:
                     Intent competitionIntent = new Intent(MainActivity.this, CompetitionMain.class);
                     MainActivity.this.startActivity(competitionIntent);

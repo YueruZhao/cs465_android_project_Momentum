@@ -44,6 +44,14 @@
             android:onClick="LogHabit"
             android:text="Log This!" />
     </LinearLayout>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="70" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +71,14 @@
             android:layout_height="wrap_content"
             android:onClick="LogHabit"
             android:text="Log This!" />
+
     </LinearLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="20" />
     </LinearLayout>
 
 <!--    ADD Habit Button-->
