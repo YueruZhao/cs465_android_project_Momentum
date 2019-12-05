@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompetitionMain"
+    android:orientation="vertical">
+
+
+    <!--    avatar-->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!--    habit list-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/comp1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="competitionDetail"
+                android:paddingLeft="15dp"
+                android:textColor="@android:color/black"
+                android:text="Meditate Once a Week"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/logcomp1"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/holo_orange_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="LogHabit"
+                android:text="Log This!"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progressTint="@android:color/holo_orange_light"
+            android:layout_marginStart="15dp"
+            android:progress="80" />
+        <LinearLayout
+        android:layout_marginTop="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/comp2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            android:text="No Soda" />
+
+        <Button
+            android:id="@+id/logcomp2"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/holo_orange_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="LogHabit"
+            android:textColor="@android:color/white"
+            android:text="Log This!" />
+    </LinearLayout>
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progressTint="@android:color/holo_orange_light"
+            android:layout_marginStart="15dp"
+            android:progress="30" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/comp3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+
+                android:text="Drink 8 Glasses of Water everyday" />
+
+            <Button
+                android:id="@+id/logcomp3"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/holo_orange_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="LogHabit"
+                android:textColor="@android:color/white"
+                android:text="Log This!" />
+        </LinearLayout>
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_marginTop="5dp"
+            android:progressTint="@android:color/holo_orange_light"
+            android:layout_marginStart="15dp"
+            android:progress="0" />
+
+    </LinearLayout>
+
+    <!--    ADD Habit Button-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="200dp"-->
+    <!--        >-->
+    <!--    ADD Habit Button-->
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:onClick="createCompetition"
+        android:background="@drawable/fab2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add_black_24dp" />
+    <!--        <Button-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:gravity="center"-->
+    <!--            android:onClick="createCompetition"-->
+    <!--            android:text="Create Competition" />-->
+
+    <!--        <Button-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:gravity="center"-->
+    <!--            android:onClick="browseCompetition"-->
+    <!--            android:text="Browse Competition" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    navigation bar-->
+    <!--    <android.support.design.widget.BottomNavigationView-->
+    <!--        android:id="@+id/bottom_navigation"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        app:menu="@menu/nav_menu"-->
+    <!--        app:itemBackground="@color/colorPrimary"-->
+    <!--        app:itemIconTint="@android:color/white"-->
+    <!--        app:itemTextColor="@android:color/white" />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@android:color/holo_orange_light"
+        app:menu="@menu/nav_menu"
+        app:itemTextColor="@android:color/white"
+        />
+
+
+</LinearLayout>
